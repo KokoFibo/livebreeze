@@ -21,4 +21,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/customer', function () {
+    return view('livewire.customer');
+})->middleware(['auth', 'verified'])->name('customer');
+
 require __DIR__.'/auth.php';
