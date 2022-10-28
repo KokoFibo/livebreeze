@@ -25,4 +25,8 @@ Route::get('/customer', function () {
     return view('livewire.customer');
 })->middleware(['auth', 'verified'])->name('customer');
 
+Route::get('/customer/id/edit', function () {
+    return view('livewire.edit');
+})->middleware(['auth', 'verified'])->name('customer.edit');
+
 require __DIR__.'/auth.php';
